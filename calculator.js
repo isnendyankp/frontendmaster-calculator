@@ -1,3 +1,7 @@
+// Buffer untuk menyimpan angka yang sedang diinput
+// Diinisialisasi dengan "0" sebagai nilai awal
+let buffer = "0";
+
 // Fungsi untuk menangani semua klik tombol pada kalkulator
 // Parameter 'value' adalah teks dari tombol yang diklik (misal: "1", "+", "C")
 function buttonClick(value) {
@@ -13,8 +17,19 @@ function buttonClick(value) {
     }
 }
 
+// Fungsi untuk menangani input angka
+// Parameter 'number' adalah string angka yang diklik (0-9)
 function handleNumber(number) {
-
+    // Jika buffer masih "0" (nilai awal)
+    // Ganti dengan angka yang baru diklik
+    if (buffer === "0") {
+        buffer = number;
+    } else {
+        // Jika buffer sudah berisi angka lain
+        // Tambahkan angka baru di belakangnya (concatenate)
+        // Contoh: buffer "1" + number "2" = "12"
+        buffer += number;
+    }
 }
 
 function handleSymbol(symbol) {
