@@ -1,5 +1,16 @@
+// Fungsi untuk menangani semua klik tombol pada kalkulator
+// Parameter 'value' adalah teks dari tombol yang diklik (misal: "1", "+", "C")
 function buttonClick(value) {
-
+    // Mengecek apakah nilai yang diklik BUKAN angka
+    // isNaN = "is Not a Number"
+    // parseInt mencoba mengubah value menjadi angka
+    if (isNaN(parseInt(value))) { 
+        // Jika bukan angka (misal: "+", "-", "C"), panggil handleSymbol
+        handleSymbol(value);
+    } else {
+        // Jika angka (0-9), panggil handleNumber
+        handleNumber(value);
+    }
 }
 
 function handleNumber(number) {
