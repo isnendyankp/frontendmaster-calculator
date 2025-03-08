@@ -1,3 +1,15 @@
+function buttonClick(value) {
+
+}
+
+function handleNumber(number) {
+
+}
+
+function handleSymbol(symbol) {
+
+}
+
 // Fungsi init() digunakan untuk menginisialisasi kalkulator
 // Fungsi ini akan dijalankan saat halaman pertama kali dimuat
 function init() {
