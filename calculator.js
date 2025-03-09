@@ -2,6 +2,9 @@
 // Diinisialisasi dengan "0" sebagai nilai awal
 let buffer = "0";
 
+// Element screen untuk menampilkan hasil
+const screen = document.querySelector(".screen");
+
 // Fungsi untuk menangani semua klik tombol pada kalkulator
 // Parameter 'value' adalah teks dari tombol yang diklik (misal: "1", "+", "C")
 function buttonClick(value) {
