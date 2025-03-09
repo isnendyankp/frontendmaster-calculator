@@ -2,8 +2,8 @@
 // Diinisialisasi dengan "0" sebagai nilai awal
 let buffer = "0";
 
-// Element screen untuk menampilkan hasil
-const screen = document.querySelector(".screen");
+// Mengambil referensi ke elemen layar kalkulator
+const screen = document.querySelector('.screen');
 
 // Fungsi untuk menangani semua klik tombol pada kalkulator
 // Parameter 'value' adalah teks dari tombol yang diklik (misal: "1", "+", "C")
@@ -51,4 +51,12 @@ function init() {
         // dan kirim ke fungsi buttonClick untuk diproses
         buttonClick(event.target.innerText);
       });
+  }
+
+  // Fungsi untuk memperbarui tampilan kalkulator
+  // Mengubah teks pada layar kalkulator sesuai dengan nilai di buffer
+  function rerender() {
+    // Mengupdate tampilan layar dengan nilai terbaru dari buffer
+    // Contoh: Jika buffer = "123", layar akan menampilkan "123"
+    screen.innerText = buffer;
   }
