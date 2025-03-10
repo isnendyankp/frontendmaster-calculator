@@ -60,3 +60,6 @@ function init() {
     // Contoh: Jika buffer = "123", layar akan menampilkan "123"
     screen.innerText = buffer;
   }
+
+  // Memanggil fungsi init() untuk menginisialisasi kalkulator
+  init();
