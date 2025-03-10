@@ -37,9 +37,15 @@ function handleNumber(number) {
     }
 }
 
-function handleSymbol(symbol) {
-
-}
+function handleSymbol(value) {
+    switch (value) {
+        case "C":
+            buffer = "0";
+            runningTotal = 0;
+            break;
+    }
+  }
+  
 
 // Fungsi init() digunakan untuk menginisialisasi kalkulator
 // Fungsi ini akan dijalankan saat halaman pertama kali dimuat
