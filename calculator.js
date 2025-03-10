@@ -43,6 +43,18 @@ function handleSymbol(value) {
             buffer = "0";
             runningTotal = 0;
             break;
+        case "=":
+            console.log('runningTotal')
+            break;
+        case "←":
+            console.log('backarrow')
+            break;
+        case "+":
+        case "-":
+        case "×":
+        case "÷":
+            console.log('math')
+            break;
     }
   }
   
