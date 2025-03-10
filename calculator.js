@@ -18,6 +18,8 @@ function buttonClick(value) {
         // Jika angka (0-9), panggil handleNumber
         handleNumber(value);
     }
+    // Memanggil fungsi rerender untuk memperbarui tampilan layar
+    rerender();
 }
 
 // Fungsi untuk menangani input angka
