@@ -38,7 +38,13 @@ function handleNumber(number) {
 }
 
 function handleMath(symbol) {
-
+    // Jika buffer masih "0" (nilai awal)
+    // Mengabaikan simbol yang diklik
+    if (buffer === "0") {
+        // do nothing
+        return;
+    }
+    
 }
 
 function handleSymbol(value) {
