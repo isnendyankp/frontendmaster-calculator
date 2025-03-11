@@ -37,6 +37,10 @@ function handleNumber(number) {
     }
 }
 
+function handleMath(symbol) {
+
+}
+
 function handleSymbol(value) {
     switch (value) {
         case "C":
@@ -57,7 +61,7 @@ function handleSymbol(value) {
         case "-":
         case "×":
         case "÷":
-            console.log('math')
+            handleMath(symbol);
             break;
     }
   }
