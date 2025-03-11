@@ -44,7 +44,8 @@ function handleMath(symbol) {
         // do nothing
         return;
     }
-    
+    // Mengkonversi buffer ke angka
+    const intBuffer = parseInt(buffer);
 }
 
 function handleSymbol(value) {
