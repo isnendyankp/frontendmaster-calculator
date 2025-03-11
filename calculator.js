@@ -47,7 +47,11 @@ function handleSymbol(value) {
             console.log('runningTotal')
             break;
         case "←":
-            console.log('backarrow')
+            if (buffer.length === 1) {
+              buffer = "0";
+            } else {
+              buffer = buffer.substring(0, buffer.length - 1);
+            }
             break;
         case "+":
         case "-":
