@@ -6,6 +6,10 @@ let buffer = "0";
 // Diinisialisasi runningTotal sebagai 0
 let runningTotal = 0;
 
+// previousOperator adalah simbol operasi matematika yang terakhir
+// Diinisialisasi previousOperator sebagai ""
+let previousOperator;
+
 // Mengambil referensi ke elemen layar kalkulator
 const screen = document.querySelector('.screen');
 
