@@ -46,6 +46,12 @@ function handleMath(symbol) {
     }
     // Mengkonversi buffer ke angka
     const intBuffer = parseInt(buffer);
+    // Untuk menentukan apakah operasi harus dilakukan
+    if (runningTotal === 0) {
+        runningTotal = intBuffer;
+      } else {
+        flushOperation(intBuffer);
+      }
 }
 
 function handleSymbol(value) {
