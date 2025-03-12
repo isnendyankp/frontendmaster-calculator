@@ -2,6 +2,10 @@
 // Diinisialisasi dengan "0" sebagai nilai awal
 let buffer = "0";
 
+// runningTotal adalah hasil dari operasi matematika yang sedang berlangsung
+// Diinisialisasi runningTotal sebagai 0
+let runningTotal = 0;
+
 // Mengambil referensi ke elemen layar kalkulator
 const screen = document.querySelector('.screen');
 
