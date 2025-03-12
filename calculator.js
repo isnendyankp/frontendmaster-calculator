@@ -45,7 +45,7 @@ function handleNumber(number) {
     }
 }
 
-function handleMath(symbol) {
+function handleMath(value) {
     // Jika buffer masih "0" (nilai awal)
     // Mengabaikan simbol yang diklik
     if (buffer === "0") {
@@ -60,6 +60,8 @@ function handleMath(symbol) {
       } else {
         flushOperation(intBuffer);
       }
+      // ini di gunakan untuk menyimpan simbol operasi matematika yang terakhir
+      previousOperator = value;
 }
 
 function handleSymbol(value) {
@@ -82,7 +84,7 @@ function handleSymbol(value) {
         case "-":
         case "×":
         case "÷":
-            handleMath(symbol);
+            handleMath(value);
             break;
     }
   }
