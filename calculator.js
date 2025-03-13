@@ -67,6 +67,11 @@ function handleMath(value) {
       buffer = "0";
 }
 
+
+function flushOperation(intBuffer) {
+
+}
+
 function handleSymbol(value) {
     switch (value) {
         case "C":
