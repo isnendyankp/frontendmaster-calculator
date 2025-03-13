@@ -67,9 +67,37 @@ function handleMath(value) {
       buffer = "0";
 }
 
-
+// Fungsi untuk melakukan operasi matematika berdasarkan operator yang tersimpan
+// Parameter intBuffer adalah angka yang baru diinput oleh user
 function flushOperation(intBuffer) {
+  // Mengecek operator yang tersimpan dan melakukan operasi yang sesuai
+  // runningTotal adalah hasil perhitungan sejauh ini
+  // intBuffer adalah angka yang baru diinput
 
+  // Jika operator adalah tambah (+)
+  if (previousOperator === "+") {
+    // Menambahkan angka baru ke hasil sebelumnya
+    // Contoh: 5 + 3, runningTotal (5) += intBuffer (3)
+    runningTotal += intBuffer;
+  } 
+  // Jika operator adalah kurang (-)
+  else if (previousOperator === "-") {
+    // Mengurangi hasil sebelumnya dengan angka baru
+    // Contoh: 5 - 3, runningTotal (5) -= intBuffer (3)
+    runningTotal -= intBuffer;
+  } 
+  // Jika operator adalah kali (×)
+  else if (previousOperator === "×") {
+    // Mengalikan hasil sebelumnya dengan angka baru
+    // Contoh: 5 × 3, runningTotal (5) *= intBuffer (3)
+    runningTotal *= intBuffer;
+  } 
+  // Jika operator adalah bagi (÷)
+  else {
+    // Membagi hasil sebelumnya dengan angka baru
+    // Contoh: 6 ÷ 2, runningTotal (6) /= intBuffer (2)
+    runningTotal /= intBuffer;
+  }
 }
 
 function handleSymbol(value) {
