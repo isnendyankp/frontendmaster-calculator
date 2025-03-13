@@ -107,7 +107,16 @@ function handleSymbol(value) {
             runningTotal = 0;
             break;
         case "=":
-            console.log('runningTotal')
+            // Mengecek apakah ada operator yang sudah dipilih sebelumnya
+            // previousOperator === null berarti belum ada operator yang dipilih
+            // Contoh: User langsung klik "=" tanpa operasi matematika
+            if (previousOperator === null) {
+                // Keluar dari fungsi karena tidak bisa melakukan perhitungan
+                // Butuh dua angka dan satu operator untuk melakukan matematika
+                // Contoh yang valid: "5 + 3 ="
+                // Contoh yang tidak valid: "5 ="
+                return;
+              }
             break;
         case "←":
             if (buffer.length === 1) {
