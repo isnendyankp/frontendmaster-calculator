@@ -62,6 +62,9 @@ function handleMath(value) {
       }
       // ini di gunakan untuk menyimpan simbol operasi matematika yang terakhir
       previousOperator = value;
+
+      // Mengatur buffer kembali menjadi "0"
+      buffer = "0";
 }
 
 function handleSymbol(value) {
