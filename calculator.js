@@ -7,8 +7,8 @@ let buffer = "0";
 let runningTotal = 0;
 
 // previousOperator adalah simbol operasi matematika yang terakhir
-// Diinisialisasi previousOperator sebagai ""
-let previousOperator;
+// Diinisialisasi previousOperator sebagai null
+let previousOperator  = null;
 
 // Mengambil referensi ke elemen layar kalkulator
 const screen = document.querySelector('.screen');
