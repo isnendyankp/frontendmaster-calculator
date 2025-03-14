@@ -117,6 +117,15 @@ function handleSymbol(value) {
                 // Contoh yang tidak valid: "5 ="
                 return;
               }
+            
+            // Melakukan perhitungan terakhir saat tombol "=" diklik
+            // 1. parseInt(buffer) mengubah string angka menjadi number
+            // 2. flushOperation menghitung hasil akhir berdasarkan:
+            //    - runningTotal (angka pertama)
+            //    - previousOperator (+-×÷)
+            //    - buffer (angka kedua)
+            // Contoh: "5 + 3 =" → flushOperation(3) → 5 + 3 = 8
+            flushOperation(parseInt(buffer));
             break;
         case "←":
             if (buffer.length === 1) {
