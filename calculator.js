@@ -134,6 +134,16 @@ function handleSymbol(value) {
             //    - Memungkinkan perhitungan lanjutan (misal: 8 + 2)
             // 3. Saat rerender() dipanggil, layar akan menampilkan hasil
             buffer = runningTotal;
+            // Mengatur runningTotal menjadi 0 untuk memulai perhitungan baru
+            // Ini penting karena:
+            // 1. Hasil sudah disimpan di buffer untuk ditampilkan
+            // 2. Jika user mulai ketik angka baru, itu akan jadi perhitungan baru
+            // 3. Mencegah hasil sebelumnya mempengaruhi perhitungan berikutnya
+            // Contoh:
+            // - User mengetik "5 + 3 =" → hasil 8 disimpan di buffer
+            // - runningTotal = 0 untuk siap perhitungan baru
+            // - Jika user ketik "2", ini akan jadi perhitungan baru, bukan "8 + 2"
+            runningTotal = 0;
             break;
         case "←":
             if (buffer.length === 1) {
