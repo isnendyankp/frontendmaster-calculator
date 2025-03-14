@@ -126,6 +126,14 @@ function handleSymbol(value) {
             //    - buffer (angka kedua)
             // Contoh: "5 + 3 =" → flushOperation(3) → 5 + 3 = 8
             flushOperation(parseInt(buffer));
+            
+            // Setelah perhitungan selesai:
+            // 1. runningTotal sekarang berisi hasil perhitungan (misal: 8)
+            // 2. buffer akan diupdate dengan hasil ini untuk:
+            //    - Menampilkan hasil di layar kalkulator
+            //    - Memungkinkan perhitungan lanjutan (misal: 8 + 2)
+            // 3. Saat rerender() dipanggil, layar akan menampilkan hasil
+            buffer = runningTotal;
             break;
         case "←":
             if (buffer.length === 1) {
