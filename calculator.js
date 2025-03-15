@@ -133,7 +133,7 @@ function handleSymbol(value) {
             //    - Menampilkan hasil di layar kalkulator
             //    - Memungkinkan perhitungan lanjutan (misal: 8 + 2)
             // 3. Saat rerender() dipanggil, layar akan menampilkan hasil
-            buffer = runningTotal;
+            buffer = "" + runningTotal;
             // Mengatur runningTotal menjadi 0 untuk memulai perhitungan baru
             // Ini penting karena:
             // 1. Hasil sudah disimpan di buffer untuk ditampilkan
